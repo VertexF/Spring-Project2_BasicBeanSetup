@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id = "shapeTemplate" abstract = "true">
+      <property name = "Height">
+            <value>0</value>
+      </property>
+      <property name = "Width">
+            <value>0</value>
+      </property>
+   </bean>
+    
+   <bean id = "rect" class = "hellospring.Rectangle" parent = "shapeTemplate">
+      <property name = "Width">
+            <value>5</value>
+      </property>
+      <property name = "Height">
+            <value>2</value>
+      </property>
+   </bean>
+   
+   <bean id = "square" class = "hellospring.Square" parent = "shapeTemplate">
+      <property name = "Width">
+            <value>10</value>
+      </property>
+   </bean>
+   
+</beans>
